@@ -21,6 +21,8 @@ int main(void) {
     initSciMutex();
     initI2CMutex();
 
+    // The supervisor is the only task running initially.
+    initSupervisor();
 
     vTaskStartScheduler();
 }
